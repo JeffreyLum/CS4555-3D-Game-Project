@@ -1,2 +1,2 @@
 # CS4555-3D-Game-Project
-CS 4555 Project
+Game Project for Cal State LA's CS 4555 Course
