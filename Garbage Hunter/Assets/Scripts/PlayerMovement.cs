@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
 
     public CharacterController controller;
     public float speed = 15f;
-    private float characterVelocityY;
+    private float velocity;
     private Vector3 characterVelocityMomentum;
     public float gravity = -75f;
     public float jumpHeight = 3f;
@@ -82,7 +82,7 @@ public class PlayerMovement : MonoBehaviour
         }
         if (Input.GetButtonDown("Jump") && jumpLimit != 0)
         {
-            characterVelocityY = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            velocity = Mathf.Sqrt(jumpHeight * -2f * gravity);
             jumpLimit--;
         }
 
@@ -97,19 +97,19 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // Applies gravity
-        characterVelocityY += gravity * Time.deltaTime;
+        velocity += gravity * Time.deltaTime;
 
         // Applies Y velocity to move vector
-        characterVelocity.y = characterVelocityY;
+        characterVelocity.y = velocity;
 
         // Moves the character
         controller.Move(characterVelocity * Time.deltaTime);
 
         // Checks if player is on the ground
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistnace, groundMask);
-        if (isGrounded && characterVelocityY < 0)
+        if (isGrounded && velocity < 0)
         {
-            characterVelocityY = -1f;
+            velocity = -1f;
         }
 
         // Apply Momentum
@@ -132,7 +132,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void ResetGravity()
     {
-        characterVelocityY = 0;
+        velocity = 0;
     }
 
     private void HandleHookshotStart()
@@ -183,7 +183,6 @@ public class PlayerMovement : MonoBehaviour
         {
             // If the hook shot reached its position
             StopHookshot();
-
         }
 
         if (InputDownHookshot())
