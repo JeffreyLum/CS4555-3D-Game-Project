@@ -1154,16 +1154,18 @@ MonoBehaviour:
   debugHitPointTransform: {fileID: 1882587462}
   hookshotTransform: {fileID: 531452811}
   controller: {fileID: 719004752}
-  speed: 15
+  speed: 25
   gravity: -75
   jumpHeight: 5
-  groundCheck: {fileID: 532064883}
   groundDistnace: 0.6
   groundMask:
     serializedVersion: 2
     m_Bits: 64
+  groundCheck: {fileID: 532064883}
   playerCamera: {fileID: 963194227}
   jumpLimit: 1
+  dashSpeed: 8
+  dashTime: 0.2
 --- !u!143 &719004752
 CharacterController:
   m_ObjectHideFlags: 0

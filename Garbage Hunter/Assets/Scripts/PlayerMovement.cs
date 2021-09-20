@@ -5,8 +5,8 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 
-    private const float NORMAL_FOV = 90f;
-    private const float HOOKSHOT_FOV = 120f;
+   private const float NORMAL_FOV = 90f;
+   private const float HOOKSHOT_FOV = 120f;
 
     [SerializeField] private Transform debugHitPointTransform;
     [SerializeField] private Transform hookshotTransform;
@@ -17,15 +17,27 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 characterVelocityMomentum;
     public float gravity = -75f;
     public float jumpHeight = 3f;
-    public Transform groundCheck;
+    
+    // Ground checker
     public float groundDistnace = 0.6f;
     public LayerMask groundMask;
     private bool isGrounded;
+    public Transform groundCheck;
+
+    // Camera 
     public Camera playerCamera;
-    private MouseLook cameraFOV;
+   private MouseLook cameraFOV;
+
+    // Allows for double jump
     public int jumpLimit = 1;
+
+    // hook shot
     private Vector3 hookshotPosition;
     private float hookshotSize;
+
+    // Dashing
+    public float dashSpeed;
+    public float dashTime;
 
     private State state;
     private enum State
@@ -61,10 +73,7 @@ public class PlayerMovement : MonoBehaviour
             case State.HookshotFly:
                 HandleHookshotMovement();
                 break;
-
-
         }
-
     }
 
     private void playerMovement()
@@ -78,7 +87,6 @@ public class PlayerMovement : MonoBehaviour
         if (isGrounded)
         {
             jumpLimit = 1;
-
         }
         if (Input.GetButtonDown("Jump") && jumpLimit != 0)
         {
@@ -86,15 +94,7 @@ public class PlayerMovement : MonoBehaviour
             jumpLimit--;
         }
 
-        // Sprint Speed
-        if (Input.GetKey(KeyCode.LeftShift))
-        {
-            speed = 20;
-        }
-        if (Input.GetKeyUp(KeyCode.LeftShift))
-        {
-            speed = 15;
-        }
+        
 
         // Applies gravity
         velocity += gravity * Time.deltaTime;
@@ -128,8 +128,28 @@ public class PlayerMovement : MonoBehaviour
                 characterVelocityMomentum = Vector3.zero;
             }
         }
+
+        // Allows the character to dash
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            StartCoroutine(Dash());
+        }
+
     }
 
+    IEnumerator Dash()
+    {
+        float x = Input.GetAxis("Horizontal");
+        float z = Input.GetAxis("Vertical");
+
+        Vector3 characterVelocity = transform.right * x * speed + transform.forward * z * speed;
+        float startTime = Time.time;
+        while(Time.time < startTime + dashTime)
+        {
+            controller.Move(characterVelocity * dashSpeed * Time.deltaTime);
+            yield return null;
+        }
+    }
     private void ResetGravity()
     {
         velocity = 0;
@@ -222,4 +242,6 @@ public class PlayerMovement : MonoBehaviour
     {
         return Input.GetButtonDown("Jump");
     }
+
+    
 }
