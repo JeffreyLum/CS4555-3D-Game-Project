@@ -17,7 +17,7 @@ public class MouseLook : MonoBehaviour
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
-        playerCamera.GetComponent<Camera>();
+        playerCamera=GetComponent<Camera>();
         targetFOV = playerCamera.fieldOfView;
         FOV = targetFOV;
     }

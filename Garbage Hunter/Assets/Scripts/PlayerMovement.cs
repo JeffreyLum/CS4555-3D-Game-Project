@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Transform hookshotTransform;
 
     public CharacterController controller;
-    public float speed = 15f;
+    public float speed = 12f;
     private float velocity;
     private Vector3 characterVelocityMomentum;
     public float gravity = -75f;
@@ -147,6 +147,7 @@ public class PlayerMovement : MonoBehaviour
         while(Time.time < startTime + dashTime)
         {
             controller.Move(characterVelocity * dashSpeed * Time.deltaTime);
+            jumpLimit = 1;
             yield return null;
         }
     }
