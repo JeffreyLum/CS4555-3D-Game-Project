@@ -19,6 +19,7 @@ public class FallingObjs : MonoBehaviour
         random = new System.Random();
         objsFall = new GameObject("Falling");
         objsFall.transform.position = new Vector3(50,40,-42);
+        objsFall.gameObject.tag = "Trash";
         // create falling obj on every interval seconds untill the counter is level * 20 
         InvokeRepeating("createType", startT, interval);
     }
@@ -44,19 +45,22 @@ public class FallingObjs : MonoBehaviour
     {
         print("creating obj");
         GameObject cur;
+        GameObject detector;
+
         if ( type == 1)
         {
             cur = GameObject.CreatePrimitive(PrimitiveType.Cube);
+            detector = new GameObject("Collision Detector");
         }
         else if (type == 2)
         {
             cur = GameObject.CreatePrimitive(PrimitiveType.Cylinder);
-
+            detector = new GameObject("Collision Detector");
         }
         else
         {
             cur = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-
+            detector = new GameObject("Collision Detector");
         }
         int x1 = random.Next(25, 75);
         int y1 = random.Next(30, 50);
@@ -64,10 +68,19 @@ public class FallingObjs : MonoBehaviour
         cur.transform.position = new Vector3(x1, y1, z1);
         cur.transform.parent = objsFall.gameObject.transform;
         cur.AddComponent<Rigidbody>();
+        cur.AddComponent<PickUp>();
+        cur.gameObject.tag = "Trash";
         Rigidbody rgbd = cur.GetComponent<Rigidbody>();
         rgbd.useGravity = true;
         rgbd.drag = 2;
-    }
 
+        detector.transform.parent = cur.gameObject.transform;
+        detector.AddComponent<BoxCollider>();
+        BoxCollider col = detector.GetComponent<BoxCollider>();
+        col.transform.position = new Vector3(cur.transform.position.x, cur.transform.position.y, cur.transform.position.z); // So it spawns at the same place as the parent
+        col.size = new Vector3(3, 3, 3); // This sets how big the detection box should be
+        col.isTrigger = true;
+        
+    }
 
 }

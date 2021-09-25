@@ -221,6 +221,8 @@ public class PlayerMovement : MonoBehaviour
 
             float jumpSpeed = 40f;
             characterVelocityMomentum += Vector3.up * jumpSpeed;
+
+
             StopHookshot();
 
         }
@@ -228,6 +230,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void StopHookshot()
     {
+        jumpLimit = 1;
         state = State.Normal;
         ResetGravity();
         hookshotTransform.gameObject.SetActive(false);
