@@ -5,7 +5,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637682325810000000
+      ticks: 637682686580000000
     m_Hash: 1057299360
   m_LockFileStatus:
     m_FilePath: C:/Users/Peter/Desktop/Game/CS4555-3D-Game-Project/Garbage Hunter/Packages/packages-lock.json
@@ -13,7 +13,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637682325810000000
+      ticks: 637682686580000000
     m_Hash: 1016591461
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
