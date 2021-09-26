@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
    private const float NORMAL_FOV = 90f;
    private const float HOOKSHOT_FOV = 120f;
 
+    private int lowestfloor = -40;
+
     [SerializeField] private Transform debugHitPointTransform;
     [SerializeField] private Transform hookshotTransform;
 
@@ -46,6 +48,18 @@ public class PlayerMovement : MonoBehaviour
         HookshotFly,
         HookshotThrown
     }
+
+    //Inventory
+    public ContainerScript inventory;
+
+    public float inv_Space; //Max Space  (trash+plastic+glass+paper <= invSpace)
+    
+    public float trash=0;
+    public float plastic=0;
+    public float glass=0;
+    public float paper=0;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -73,6 +87,14 @@ public class PlayerMovement : MonoBehaviour
             case State.HookshotFly:
                 HandleHookshotMovement();
                 break;
+        }
+    }
+
+    void LateUpdate()
+    {
+        if (UnderMap())
+        {
+            controller.transform.position = new Vector3(37,10,-43);
         }
     }
 
@@ -247,5 +269,96 @@ public class PlayerMovement : MonoBehaviour
         return Input.GetButtonDown("Jump");
     }
 
-    
+    private bool UnderMap()
+    {
+        return (controller.transform.position.y < lowestfloor);
+    }
+
+    //getters
+
+    public float getTrash()
+    {
+        return trash;
+    }
+
+    public float getPlastic()
+    {
+        return plastic;
+    }
+
+    public float getPaper()
+    {
+        return paper;
+    }
+
+    public float getGlass()
+    {
+        return glass;
+    }
+
+    public float getInvSpace()
+    {
+        return inv_Space;
+    }
+
+    //setters
+
+    public void setInvSpace(float a)
+    {
+        inv_Space = a;
+    }
+
+    public void addTrash()
+    {
+        trash += 1;
+        inventory.addValue();
+    }
+
+    public void addPlastic()
+    {
+        plastic +=1;
+        inventory.addValue();
+    }
+    public void addGlass()
+    {
+        glass += 1;
+        inventory.addValue();
+    }
+    public void addPaper()
+    {
+        paper += 1;
+        inventory.addValue();
+    }
+
+    //counter reset
+
+    public bool resetInv()
+    {   
+        bool output =false;
+        if (trash != 0)
+        {
+            trash = 0;
+            output = true;
+        }
+        if (paper != 0)
+        {
+            paper = 0;
+            output = true;
+        }
+        if (plastic != 0)
+        {
+            plastic = 0;
+            output = true;
+        }
+        if (glass != 0)
+        {
+            glass = 0;
+            output = true;
+        }
+
+        inventory.setValue(0);
+
+        return output;
+    }
+
 }

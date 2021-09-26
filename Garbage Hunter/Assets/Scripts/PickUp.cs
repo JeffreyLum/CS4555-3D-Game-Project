@@ -5,9 +5,12 @@ using UnityEngine;
 public class PickUp : MonoBehaviour
 {
     // Start is called before the first frame update
+    public Type type;
+    private bool debounce = false;
+
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -17,10 +20,49 @@ public class PickUp : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Player") // If the collision area touches the player, the object gets destroyed.
+        if (debounce == false)
         {
-            Debug.Log("touched");
-            Destroy(gameObject);
+            if (other.tag == "Player") // If the collision area touches the player, the object gets destroyed.
+            {
+
+                if (other.GetComponent<PlayerMovement>())
+                {
+
+                    var playermove = other.GetComponent<PlayerMovement>();
+
+                    float inv_p = playermove.getInvSpace();
+
+                    float trash_p = playermove.getTrash();
+                    float paper_p = playermove.getPaper();
+                    float glass_p = playermove.getGlass();
+                    float plastic_p = playermove.getPlastic();
+
+                    if (trash_p + paper_p + glass_p + plastic_p < inv_p)
+                    {
+
+                        switch (type)
+                        {
+                            default:
+                            case Type.Trash:
+                                playermove.addTrash();
+                                break;
+                            case Type.Paper:
+                                playermove.addPaper();
+                                break;
+                            case Type.Glass:
+                                playermove.addGlass();
+                                break;
+                            case Type.Plastic:
+                                playermove.addPlastic();
+                                break;
+                        }
+                        debounce = true;
+                        Debug.Log("touched_OnTrigger");
+                        Destroy(gameObject);
+                    }
+
+                }
+            }
         }
     }
 
@@ -29,11 +71,19 @@ public class PickUp : MonoBehaviour
     {
         if(collision.gameObject.tag == "Trash")
         {
-            Debug.Log("touched");
+            Debug.Log("touched_CollisionEnter");
             Destroy(collision.gameObject);
         }
     }
 
 
 
+}
+
+public enum Type
+{
+    Trash,
+    Paper,
+    Glass,
+    Plastic
 }
