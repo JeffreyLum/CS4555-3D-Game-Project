@@ -45,24 +45,34 @@ public class FallingObjs : MonoBehaviour
         }
     }
 
-    // Create trash and set up its properties like gravity, falling speed, collision, and position, parrent class. 
+    // Create trash and set up its properties like gravity, falling speed, collision, and position, parrent class,
+    // setting color, Red for disposible, Green for recycle, Balck for Landfill. 
     void createObjs(int type)
     {
         print("creating obj");
         GameObject curObj;
         GameObject detector;
 
-        if ( type == 1)
+        if ( type == 1) // Blue Cube for Decomposable
+
         {
             curObj = GameObject.CreatePrimitive(PrimitiveType.Cube);
+            var cubeRenderer = curObj.GetComponent<Renderer>();
+            cubeRenderer.material.SetColor("_Color", Color.blue);
         }
-        else if (type == 2)
+        else if (type == 2) //Green Cylinder for Recyclable
+
         {
             curObj = GameObject.CreatePrimitive(PrimitiveType.Cylinder);
+            var cubeRenderer = curObj.GetComponent<Renderer>();
+            cubeRenderer.material.SetColor("_Color", Color.green);
         }
-        else
+        else    // Black sphere for Harmful Landfill
+
         {
             curObj = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+            var cubeRenderer = curObj.GetComponent<Renderer>();
+            cubeRenderer.material.SetColor("_Color", Color.black);
         }
 
         // positioning
@@ -79,6 +89,9 @@ public class FallingObjs : MonoBehaviour
         Rigidbody rgbd = curObj.GetComponent<Rigidbody>();
         rgbd.useGravity = true;
         rgbd.drag = 2;
+
+
+
         // set Collision
         detector = new GameObject("Collision Detector");
         detector.transform.parent = curObj.gameObject.transform;

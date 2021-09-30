@@ -162,7 +162,7 @@ Transform:
   m_GameObject: {fileID: 89584820}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 40.374805, y: 20, z: -46.765667}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 20, y: 0.01, z: 20}
   m_Children:
   - {fileID: 1857184126}
   m_Father: {fileID: 0}
@@ -3546,7 +3546,7 @@ GameObject:
   - component: {fileID: 1857184127}
   - component: {fileID: 1857184131}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Falling_Obj_Reference
   m_TagString: Trash
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3560,7 +3560,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1857184125}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -19.07, z: 0}
+  m_LocalPosition: {x: 0, y: 2206, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1978270999}
