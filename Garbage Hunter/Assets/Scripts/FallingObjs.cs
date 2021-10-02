@@ -12,6 +12,8 @@ public class FallingObjs : MonoBehaviour
     public int level = 1;
     private System.Random random;
 
+    public Transform groundref;
+
 
 
     // Start is called before the first frame update
@@ -77,7 +79,7 @@ public class FallingObjs : MonoBehaviour
 
         // positioning
         int x1 = random.Next(25, 75);
-        int y1 = random.Next(30, 50);
+        int y1 = (int)groundref.position.y + random.Next(30, 50);
         int z1 = random.Next(-60, -20);
         curObj.transform.position = new Vector3(x1, y1, z1);
         // parrent
