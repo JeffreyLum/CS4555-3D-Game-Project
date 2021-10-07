@@ -14,7 +14,7 @@ public class Generation : MonoBehaviour
     public GameObject myPrefab8;
     public GameObject myPrefab9; // (42 / -2) (42/-158) (speed test)
 
-    public GameObject tilea;
+    public Transform tilea;
 
     private System.Random random;
 
