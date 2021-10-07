@@ -1,20 +1,22 @@
 m_ProjectFiles:
   m_ManifestFileStatus:
-    m_FilePath: C:/Users/tedki/Documents/Githug/CS4555-3D-Game-Project/Garbage Hunter/Packages/manifest.json
+    m_FilePath: C:/Users/jeffr/Desktop/Unity Projects/CS4555-3D-Game-Project/Garbage
+      Hunter/Packages/manifest.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637666350409828160
-    m_Hash: 3870291422
+      ticks: 637689016910000000
+    m_Hash: 214223872
   m_LockFileStatus:
-    m_FilePath: C:/Users/tedki/Documents/Githug/CS4555-3D-Game-Project/Garbage Hunter/Packages/packages-lock.json
+    m_FilePath: C:/Users/jeffr/Desktop/Unity Projects/CS4555-3D-Game-Project/Garbage
+      Hunter/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637666350409838133
-    m_Hash: 2579885654
+      ticks: 637689016910000000
+    m_Hash: 99249368
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
@@ -25,7 +27,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.7.1
       source: 1
-      resolvedPath: C:\Users\tedki\Documents\Githug\CS4555-3D-Game-Project\Garbage
+      resolvedPath: C:\Users\jeffr\Desktop\Unity Projects\CS4555-3D-Game-Project\Garbage
         Hunter\Library\PackageCache\com.unity.collab-proxy@1.7.1
       assetPath: Packages/com.unity.collab-proxy
       name: com.unity.collab-proxy
@@ -69,6 +71,8 @@ m_PackageAssets:
         - 1.9.0
         - 1.10.2
         - 1.11.2
+        - 1.12.5
+        - 1.13.5
         - 2.0.0-preview.6
         - 2.0.0-preview.8
         - 2.0.0-preview.15
@@ -85,6 +89,8 @@ m_PackageAssets:
         - 1.9.0
         - 1.10.2
         - 1.11.2
+        - 1.12.5
+        - 1.13.5
         - 2.0.0-preview.6
         - 2.0.0-preview.8
         - 2.0.0-preview.15
@@ -141,7 +147,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 2.0.7
       source: 1
-      resolvedPath: C:\Users\tedki\Documents\Githug\CS4555-3D-Game-Project\Garbage
+      resolvedPath: C:\Users\jeffr\Desktop\Unity Projects\CS4555-3D-Game-Project\Garbage
         Hunter\Library\PackageCache\com.unity.ide.rider@2.0.7
       assetPath: Packages/com.unity.ide.rider
       name: com.unity.ide.rider
@@ -249,7 +255,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 2.0.11
       source: 1
-      resolvedPath: C:\Users\tedki\Documents\Githug\CS4555-3D-Game-Project\Garbage
+      resolvedPath: C:\Users\jeffr\Desktop\Unity Projects\CS4555-3D-Game-Project\Garbage
         Hunter\Library\PackageCache\com.unity.ide.visualstudio@2.0.11
       assetPath: Packages/com.unity.ide.visualstudio
       name: com.unity.ide.visualstudio
@@ -337,7 +343,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.2.3
       source: 1
-      resolvedPath: C:\Users\tedki\Documents\Githug\CS4555-3D-Game-Project\Garbage
+      resolvedPath: C:\Users\jeffr\Desktop\Unity Projects\CS4555-3D-Game-Project\Garbage
         Hunter\Library\PackageCache\com.unity.ide.vscode@1.2.3
       assetPath: Packages/com.unity.ide.vscode
       name: com.unity.ide.vscode
@@ -404,12 +410,231 @@ m_PackageAssets:
         url: https://github.cds.internal.unity3d.com/unity/com.unity.ide.vscode.git
         revision: b5ec9b38109e52b1b26597d521e4df75e042ebb9
         path: 
+    - packageId: com.unity.probuilder@4.5.2
+      testable: 0
+      isDirectDependency: 1
+      version: 4.5.2
+      source: 1
+      resolvedPath: C:\Users\jeffr\Desktop\Unity Projects\CS4555-3D-Game-Project\Garbage
+        Hunter\Library\PackageCache\com.unity.probuilder@4.5.2
+      assetPath: Packages/com.unity.probuilder
+      name: com.unity.probuilder
+      displayName: ProBuilder
+      author:
+        name: 
+        email: 
+        url: 
+      category: 
+      type: 
+      description: 'Build, edit, and texture custom geometry in Unity. Use ProBuilder
+        for in-scene level design, prototyping, collision meshes, all with on-the-fly
+        play-testing.
+
+
+        Advanced features include UV editing, vertex colors,
+        parametric shapes, and texture blending. With ProBuilder''s model export
+        feature it''s easy to tweak your levels in any external 3D modelling suite.'
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 3.0.0
+        - 3.0.1
+        - 3.0.2
+        - 3.0.3
+        - 3.0.6
+        - 3.0.8
+        - 3.0.9
+        - 3.10.1
+        - 4.0.2
+        - 4.0.3
+        - 4.0.4
+        - 4.0.5
+        - 4.1.0
+        - 4.1.2
+        - 4.2.1
+        - 4.2.2-preview.1
+        - 4.2.2-preview.2
+        - 4.2.3
+        - 4.2.4-preview.0
+        - 4.3.0-preview.0
+        - 4.3.0-preview.1
+        - 4.3.0-preview.2
+        - 4.3.0-preview.4
+        - 4.3.0-preview.6
+        - 4.3.0-preview.7
+        - 4.3.0-preview.8
+        - 4.3.0-preview.9
+        - 4.3.1
+        - 4.4.0-preview.1
+        - 4.4.0
+        - 4.5.0
+        - 4.5.2
+        - 5.0.0-pre.7
+        - 5.0.0-pre.10
+        - 5.0.1
+        - 5.0.3
+        compatible:
+        - 4.0.2
+        - 4.0.3
+        - 4.0.4
+        - 4.0.5
+        - 4.1.0
+        - 4.1.2
+        - 4.2.1
+        - 4.2.2-preview.1
+        - 4.2.2-preview.2
+        - 4.2.3
+        - 4.2.4-preview.0
+        - 4.3.0-preview.0
+        - 4.3.0-preview.1
+        - 4.3.0-preview.2
+        - 4.3.0-preview.4
+        - 4.3.0-preview.6
+        - 4.3.0-preview.7
+        - 4.3.0-preview.8
+        - 4.3.0-preview.9
+        - 4.3.1
+        - 4.4.0-preview.1
+        - 4.4.0
+        - 4.5.0
+        - 4.5.2
+        - 5.0.0-pre.7
+        - 5.0.0-pre.10
+        - 5.0.1
+        - 5.0.3
+        verified: 4.5.2
+      dependencies:
+      - name: com.unity.settings-manager
+        version: 1.0.3
+      resolvedDependencies:
+      - name: com.unity.settings-manager
+        version: 1.0.3
+      keywords:
+      - 3d
+      - model
+      - mesh
+      - modeling
+      - geometry
+      - shape
+      - cube
+      - blender
+      - max
+      - maya
+      - fbx
+      - obj
+      - level
+      - design
+      - block
+      - greybox
+      - graybox
+      - whitebox
+      - prototype
+      - probuilder
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 637613656650000000
+      documentationUrl: 
+      hasRepository: 1
+      repository:
+        type: git
+        url: https://github.com/Unity-Technologies/com.unity.probuilder.git
+        revision: 27f52072e5f94638d1f81bc53df38e59d5bac785
+        path: 
+    - packageId: com.unity.progrids@3.0.3-preview.6
+      testable: 0
+      isDirectDependency: 1
+      version: 3.0.3-preview.6
+      source: 1
+      resolvedPath: C:\Users\jeffr\Desktop\Unity Projects\CS4555-3D-Game-Project\Garbage
+        Hunter\Library\PackageCache\com.unity.progrids@3.0.3-preview.6
+      assetPath: Packages/com.unity.progrids
+      name: com.unity.progrids
+      displayName: ProGrids
+      author:
+        name: 
+        email: 
+        url: 
+      category: 
+      type: 
+      description: 'Advanced grid and object snapping for the scene view. ProGrids
+        is a dynamically placed grid, available on all 3 axes and at any position
+        in the scene.
+
+
+        ProGrids snaps objects in world space, ensuring consistent
+        placement of objects in your level.
+
+
+        In addition, ProGrids is completely
+        customizable. Change the colors of your grid, the snap sizing, unit of measurement,
+        and more!'
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 3.0.1-preview
+        - 3.0.2-preview
+        - 3.0.3-preview.0
+        - 3.0.3-preview.4
+        - 3.0.3-preview.5
+        - 3.0.3-preview.6
+        compatible:
+        - 3.0.1-preview
+        - 3.0.2-preview
+        - 3.0.3-preview.0
+        - 3.0.3-preview.4
+        - 3.0.3-preview.5
+        - 3.0.3-preview.6
+        verified: 
+      dependencies:
+      - name: com.unity.settings-manager
+        version: 1.0.2
+      resolvedDependencies:
+      - name: com.unity.settings-manager
+        version: 1.0.3
+      keywords:
+      - grid
+      - snap
+      - manipulation
+      - array
+      - align
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 637209307060000000
+      documentationUrl: 
+      hasRepository: 1
+      repository:
+        type: git
+        url: git+https://github.com/Unity-Technologies/com.unity.progrids.git
+        revision: 381f2b0b5dda11525d53e2c608284a3f68d1beff
+        path: 
     - packageId: com.unity.test-framework@1.1.27
       testable: 0
       isDirectDependency: 1
       version: 1.1.27
       source: 1
-      resolvedPath: C:\Users\tedki\Documents\Githug\CS4555-3D-Game-Project\Garbage
+      resolvedPath: C:\Users\jeffr\Desktop\Unity Projects\CS4555-3D-Game-Project\Garbage
         Hunter\Library\PackageCache\com.unity.test-framework@1.1.27
       assetPath: Packages/com.unity.test-framework
       name: com.unity.test-framework
@@ -502,7 +727,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 3.0.6
       source: 1
-      resolvedPath: C:\Users\tedki\Documents\Githug\CS4555-3D-Game-Project\Garbage
+      resolvedPath: C:\Users\jeffr\Desktop\Unity Projects\CS4555-3D-Game-Project\Garbage
         Hunter\Library\PackageCache\com.unity.textmeshpro@3.0.6
       assetPath: Packages/com.unity.textmeshpro
       name: com.unity.textmeshpro
@@ -662,7 +887,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.4.8
       source: 1
-      resolvedPath: C:\Users\tedki\Documents\Githug\CS4555-3D-Game-Project\Garbage
+      resolvedPath: C:\Users\jeffr\Desktop\Unity Projects\CS4555-3D-Game-Project\Garbage
         Hunter\Library\PackageCache\com.unity.timeline@1.4.8
       assetPath: Packages/com.unity.timeline
       name: com.unity.timeline
@@ -815,7 +1040,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Users\tedki\Documents\Githug\CS4555-3D-Game-Project\Garbage
+      resolvedPath: C:\Users\jeffr\Desktop\Unity Projects\CS4555-3D-Game-Project\Garbage
         Hunter\Library\PackageCache\com.unity.ugui@1.0.0
       assetPath: Packages/com.unity.ugui
       name: com.unity.ugui
@@ -879,7 +1104,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Users\tedki\Documents\Githug\CS4555-3D-Game-Project\Garbage
+      resolvedPath: C:\Users\jeffr\Desktop\Unity Projects\CS4555-3D-Game-Project\Garbage
         Hunter\Library\PackageCache\com.unity.modules.ai@1.0.0
       assetPath: Packages/com.unity.modules.ai
       name: com.unity.modules.ai
@@ -928,7 +1153,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Users\tedki\Documents\Githug\CS4555-3D-Game-Project\Garbage
+      resolvedPath: C:\Users\jeffr\Desktop\Unity Projects\CS4555-3D-Game-Project\Garbage
         Hunter\Library\PackageCache\com.unity.modules.androidjni@1.0.0
       assetPath: Packages/com.unity.modules.androidjni
       name: com.unity.modules.androidjni
@@ -977,7 +1202,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Users\tedki\Documents\Githug\CS4555-3D-Game-Project\Garbage
+      resolvedPath: C:\Users\jeffr\Desktop\Unity Projects\CS4555-3D-Game-Project\Garbage
         Hunter\Library\PackageCache\com.unity.modules.animation@1.0.0
       assetPath: Packages/com.unity.modules.animation
       name: com.unity.modules.animation
@@ -1026,7 +1251,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Users\tedki\Documents\Githug\CS4555-3D-Game-Project\Garbage
+      resolvedPath: C:\Users\jeffr\Desktop\Unity Projects\CS4555-3D-Game-Project\Garbage
         Hunter\Library\PackageCache\com.unity.modules.assetbundle@1.0.0
       assetPath: Packages/com.unity.modules.assetbundle
       name: com.unity.modules.assetbundle
@@ -1075,7 +1300,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Users\tedki\Documents\Githug\CS4555-3D-Game-Project\Garbage
+      resolvedPath: C:\Users\jeffr\Desktop\Unity Projects\CS4555-3D-Game-Project\Garbage
         Hunter\Library\PackageCache\com.unity.modules.audio@1.0.0
       assetPath: Packages/com.unity.modules.audio
       name: com.unity.modules.audio
@@ -1124,7 +1349,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Users\tedki\Documents\Githug\CS4555-3D-Game-Project\Garbage
+      resolvedPath: C:\Users\jeffr\Desktop\Unity Projects\CS4555-3D-Game-Project\Garbage
         Hunter\Library\PackageCache\com.unity.modules.cloth@1.0.0
       assetPath: Packages/com.unity.modules.cloth
       name: com.unity.modules.cloth
@@ -1177,7 +1402,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Users\tedki\Documents\Githug\CS4555-3D-Game-Project\Garbage
+      resolvedPath: C:\Users\jeffr\Desktop\Unity Projects\CS4555-3D-Game-Project\Garbage
         Hunter\Library\PackageCache\com.unity.modules.director@1.0.0
       assetPath: Packages/com.unity.modules.director
       name: com.unity.modules.director
@@ -1234,7 +1459,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Users\tedki\Documents\Githug\CS4555-3D-Game-Project\Garbage
+      resolvedPath: C:\Users\jeffr\Desktop\Unity Projects\CS4555-3D-Game-Project\Garbage
         Hunter\Library\PackageCache\com.unity.modules.imageconversion@1.0.0
       assetPath: Packages/com.unity.modules.imageconversion
       name: com.unity.modules.imageconversion
@@ -1284,7 +1509,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Users\tedki\Documents\Githug\CS4555-3D-Game-Project\Garbage
+      resolvedPath: C:\Users\jeffr\Desktop\Unity Projects\CS4555-3D-Game-Project\Garbage
         Hunter\Library\PackageCache\com.unity.modules.imgui@1.0.0
       assetPath: Packages/com.unity.modules.imgui
       name: com.unity.modules.imgui
@@ -1333,7 +1558,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Users\tedki\Documents\Githug\CS4555-3D-Game-Project\Garbage
+      resolvedPath: C:\Users\jeffr\Desktop\Unity Projects\CS4555-3D-Game-Project\Garbage
         Hunter\Library\PackageCache\com.unity.modules.jsonserialize@1.0.0
       assetPath: Packages/com.unity.modules.jsonserialize
       name: com.unity.modules.jsonserialize
@@ -1382,7 +1607,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Users\tedki\Documents\Githug\CS4555-3D-Game-Project\Garbage
+      resolvedPath: C:\Users\jeffr\Desktop\Unity Projects\CS4555-3D-Game-Project\Garbage
         Hunter\Library\PackageCache\com.unity.modules.particlesystem@1.0.0
       assetPath: Packages/com.unity.modules.particlesystem
       name: com.unity.modules.particlesystem
@@ -1431,7 +1656,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Users\tedki\Documents\Githug\CS4555-3D-Game-Project\Garbage
+      resolvedPath: C:\Users\jeffr\Desktop\Unity Projects\CS4555-3D-Game-Project\Garbage
         Hunter\Library\PackageCache\com.unity.modules.physics@1.0.0
       assetPath: Packages/com.unity.modules.physics
       name: com.unity.modules.physics
@@ -1480,7 +1705,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Users\tedki\Documents\Githug\CS4555-3D-Game-Project\Garbage
+      resolvedPath: C:\Users\jeffr\Desktop\Unity Projects\CS4555-3D-Game-Project\Garbage
         Hunter\Library\PackageCache\com.unity.modules.physics2d@1.0.0
       assetPath: Packages/com.unity.modules.physics2d
       name: com.unity.modules.physics2d
@@ -1529,7 +1754,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Users\tedki\Documents\Githug\CS4555-3D-Game-Project\Garbage
+      resolvedPath: C:\Users\jeffr\Desktop\Unity Projects\CS4555-3D-Game-Project\Garbage
         Hunter\Library\PackageCache\com.unity.modules.screencapture@1.0.0
       assetPath: Packages/com.unity.modules.screencapture
       name: com.unity.modules.screencapture
@@ -1582,7 +1807,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Users\tedki\Documents\Githug\CS4555-3D-Game-Project\Garbage
+      resolvedPath: C:\Users\jeffr\Desktop\Unity Projects\CS4555-3D-Game-Project\Garbage
         Hunter\Library\PackageCache\com.unity.modules.terrain@1.0.0
       assetPath: Packages/com.unity.modules.terrain
       name: com.unity.modules.terrain
@@ -1631,7 +1856,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Users\tedki\Documents\Githug\CS4555-3D-Game-Project\Garbage
+      resolvedPath: C:\Users\jeffr\Desktop\Unity Projects\CS4555-3D-Game-Project\Garbage
         Hunter\Library\PackageCache\com.unity.modules.terrainphysics@1.0.0
       assetPath: Packages/com.unity.modules.terrainphysics
       name: com.unity.modules.terrainphysics
@@ -1688,7 +1913,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Users\tedki\Documents\Githug\CS4555-3D-Game-Project\Garbage
+      resolvedPath: C:\Users\jeffr\Desktop\Unity Projects\CS4555-3D-Game-Project\Garbage
         Hunter\Library\PackageCache\com.unity.modules.tilemap@1.0.0
       assetPath: Packages/com.unity.modules.tilemap
       name: com.unity.modules.tilemap
@@ -1741,7 +1966,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Users\tedki\Documents\Githug\CS4555-3D-Game-Project\Garbage
+      resolvedPath: C:\Users\jeffr\Desktop\Unity Projects\CS4555-3D-Game-Project\Garbage
         Hunter\Library\PackageCache\com.unity.modules.ui@1.0.0
       assetPath: Packages/com.unity.modules.ui
       name: com.unity.modules.ui
@@ -1790,7 +2015,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Users\tedki\Documents\Githug\CS4555-3D-Game-Project\Garbage
+      resolvedPath: C:\Users\jeffr\Desktop\Unity Projects\CS4555-3D-Game-Project\Garbage
         Hunter\Library\PackageCache\com.unity.modules.uielements@1.0.0
       assetPath: Packages/com.unity.modules.uielements
       name: com.unity.modules.uielements
@@ -1855,7 +2080,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Users\tedki\Documents\Githug\CS4555-3D-Game-Project\Garbage
+      resolvedPath: C:\Users\jeffr\Desktop\Unity Projects\CS4555-3D-Game-Project\Garbage
         Hunter\Library\PackageCache\com.unity.modules.umbra@1.0.0
       assetPath: Packages/com.unity.modules.umbra
       name: com.unity.modules.umbra
@@ -1904,7 +2129,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Users\tedki\Documents\Githug\CS4555-3D-Game-Project\Garbage
+      resolvedPath: C:\Users\jeffr\Desktop\Unity Projects\CS4555-3D-Game-Project\Garbage
         Hunter\Library\PackageCache\com.unity.modules.unityanalytics@1.0.0
       assetPath: Packages/com.unity.modules.unityanalytics
       name: com.unity.modules.unityanalytics
@@ -1961,7 +2186,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Users\tedki\Documents\Githug\CS4555-3D-Game-Project\Garbage
+      resolvedPath: C:\Users\jeffr\Desktop\Unity Projects\CS4555-3D-Game-Project\Garbage
         Hunter\Library\PackageCache\com.unity.modules.unitywebrequest@1.0.0
       assetPath: Packages/com.unity.modules.unitywebrequest
       name: com.unity.modules.unitywebrequest
@@ -2010,7 +2235,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Users\tedki\Documents\Githug\CS4555-3D-Game-Project\Garbage
+      resolvedPath: C:\Users\jeffr\Desktop\Unity Projects\CS4555-3D-Game-Project\Garbage
         Hunter\Library\PackageCache\com.unity.modules.unitywebrequestassetbundle@1.0.0
       assetPath: Packages/com.unity.modules.unitywebrequestassetbundle
       name: com.unity.modules.unitywebrequestassetbundle
@@ -2067,7 +2292,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Users\tedki\Documents\Githug\CS4555-3D-Game-Project\Garbage
+      resolvedPath: C:\Users\jeffr\Desktop\Unity Projects\CS4555-3D-Game-Project\Garbage
         Hunter\Library\PackageCache\com.unity.modules.unitywebrequestaudio@1.0.0
       assetPath: Packages/com.unity.modules.unitywebrequestaudio
       name: com.unity.modules.unitywebrequestaudio
@@ -2124,7 +2349,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Users\tedki\Documents\Githug\CS4555-3D-Game-Project\Garbage
+      resolvedPath: C:\Users\jeffr\Desktop\Unity Projects\CS4555-3D-Game-Project\Garbage
         Hunter\Library\PackageCache\com.unity.modules.unitywebrequesttexture@1.0.0
       assetPath: Packages/com.unity.modules.unitywebrequesttexture
       name: com.unity.modules.unitywebrequesttexture
@@ -2181,7 +2406,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Users\tedki\Documents\Githug\CS4555-3D-Game-Project\Garbage
+      resolvedPath: C:\Users\jeffr\Desktop\Unity Projects\CS4555-3D-Game-Project\Garbage
         Hunter\Library\PackageCache\com.unity.modules.unitywebrequestwww@1.0.0
       assetPath: Packages/com.unity.modules.unitywebrequestwww
       name: com.unity.modules.unitywebrequestwww
@@ -2254,7 +2479,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Users\tedki\Documents\Githug\CS4555-3D-Game-Project\Garbage
+      resolvedPath: C:\Users\jeffr\Desktop\Unity Projects\CS4555-3D-Game-Project\Garbage
         Hunter\Library\PackageCache\com.unity.modules.vehicles@1.0.0
       assetPath: Packages/com.unity.modules.vehicles
       name: com.unity.modules.vehicles
@@ -2307,7 +2532,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Users\tedki\Documents\Githug\CS4555-3D-Game-Project\Garbage
+      resolvedPath: C:\Users\jeffr\Desktop\Unity Projects\CS4555-3D-Game-Project\Garbage
         Hunter\Library\PackageCache\com.unity.modules.video@1.0.0
       assetPath: Packages/com.unity.modules.video
       name: com.unity.modules.video
@@ -2368,7 +2593,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Users\tedki\Documents\Githug\CS4555-3D-Game-Project\Garbage
+      resolvedPath: C:\Users\jeffr\Desktop\Unity Projects\CS4555-3D-Game-Project\Garbage
         Hunter\Library\PackageCache\com.unity.modules.vr@1.0.0
       assetPath: Packages/com.unity.modules.vr
       name: com.unity.modules.vr
@@ -2431,7 +2656,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Users\tedki\Documents\Githug\CS4555-3D-Game-Project\Garbage
+      resolvedPath: C:\Users\jeffr\Desktop\Unity Projects\CS4555-3D-Game-Project\Garbage
         Hunter\Library\PackageCache\com.unity.modules.wind@1.0.0
       assetPath: Packages/com.unity.modules.wind
       name: com.unity.modules.wind
@@ -2480,7 +2705,7 @@ m_PackageAssets:
       isDirectDependency: 1
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Users\tedki\Documents\Githug\CS4555-3D-Game-Project\Garbage
+      resolvedPath: C:\Users\jeffr\Desktop\Unity Projects\CS4555-3D-Game-Project\Garbage
         Hunter\Library\PackageCache\com.unity.modules.xr@1.0.0
       assetPath: Packages/com.unity.modules.xr
       name: com.unity.modules.xr
@@ -2541,7 +2766,7 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Users\tedki\Documents\Githug\CS4555-3D-Game-Project\Garbage
+      resolvedPath: C:\Users\jeffr\Desktop\Unity Projects\CS4555-3D-Game-Project\Garbage
         Hunter\Library\PackageCache\com.unity.modules.subsystems@1.0.0
       assetPath: Packages/com.unity.modules.subsystems
       name: com.unity.modules.subsystems
@@ -2594,7 +2819,7 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 1.0.0
       source: 2
-      resolvedPath: C:\Users\tedki\Documents\Githug\CS4555-3D-Game-Project\Garbage
+      resolvedPath: C:\Users\jeffr\Desktop\Unity Projects\CS4555-3D-Game-Project\Garbage
         Hunter\Library\PackageCache\com.unity.modules.uielementsnative@1.0.0
       assetPath: Packages/com.unity.modules.uielementsnative
       name: com.unity.modules.uielementsnative
@@ -2654,7 +2879,7 @@ m_PackageAssets:
       isDirectDependency: 0
       version: 1.0.6
       source: 1
-      resolvedPath: C:\Users\tedki\Documents\Githug\CS4555-3D-Game-Project\Garbage
+      resolvedPath: C:\Users\jeffr\Desktop\Unity Projects\CS4555-3D-Game-Project\Garbage
         Hunter\Library\PackageCache\com.unity.ext.nunit@1.0.6
       assetPath: Packages/com.unity.ext.nunit
       name: com.unity.ext.nunit
@@ -2671,8 +2896,18 @@ m_PackageAssets:
       errors: []
       versions:
         all:
+        - 0.1.5-preview
+        - 0.1.6-preview
+        - 0.1.9-preview
+        - 1.0.0
+        - 1.0.5
         - 1.0.6
         compatible:
+        - 0.1.5-preview
+        - 0.1.6-preview
+        - 0.1.9-preview
+        - 1.0.0
+        - 1.0.5
         - 1.0.6
         verified: 1.0.6
       dependencies: []
@@ -2693,7 +2928,7 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 0
+      datePublishedTicks: 637429759280000000
       documentationUrl: 
       hasRepository: 1
       repository:
@@ -2701,12 +2936,71 @@ m_PackageAssets:
         url: https://github.cds.internal.unity3d.com/unity/com.unity.ext.nunit.git
         revision: 29ea4d6504a5f58fb3a6934db839aa80ae6d9d88
         path: 
+    - packageId: com.unity.settings-manager@1.0.3
+      testable: 0
+      isDirectDependency: 0
+      version: 1.0.3
+      source: 1
+      resolvedPath: C:\Users\jeffr\Desktop\Unity Projects\CS4555-3D-Game-Project\Garbage
+        Hunter\Library\PackageCache\com.unity.settings-manager@1.0.3
+      assetPath: Packages/com.unity.settings-manager
+      name: com.unity.settings-manager
+      displayName: Settings Manager
+      author:
+        name: 
+        email: 
+        url: 
+      category: 
+      type: 
+      description: A framework for making any serializable field a setting, complete
+        with a pre-built settings interface.
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 0.1.0-preview.4
+        - 0.1.0-preview.8
+        - 1.0.0
+        - 1.0.1
+        - 1.0.2
+        - 1.0.3
+        compatible:
+        - 0.1.0-preview.4
+        - 0.1.0-preview.8
+        - 1.0.0
+        - 1.0.1
+        - 1.0.2
+        - 1.0.3
+        verified: 1.0.3
+      dependencies: []
+      resolvedDependencies: []
+      keywords: []
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 637300096300000000
+      documentationUrl: 
+      hasRepository: 1
+      repository:
+        type: git
+        url: git+https://github.com/Unity-Technologies/com.unity.settings-manager.git
+        revision: 473664ccba1496294b741cf169740a5d54b3d0b6
+        path: 
     - packageId: com.unity.nuget.newtonsoft-json@2.0.0
       testable: 0
       isDirectDependency: 0
       version: 2.0.0
       source: 1
-      resolvedPath: C:\Users\tedki\Documents\Githug\CS4555-3D-Game-Project\Garbage
+      resolvedPath: C:\Users\jeffr\Desktop\Unity Projects\CS4555-3D-Game-Project\Garbage
         Hunter\Library\PackageCache\com.unity.nuget.newtonsoft-json@2.0.0
       assetPath: Packages/com.unity.nuget.newtonsoft-json
       name: com.unity.nuget.newtonsoft-json
@@ -2716,7 +3010,7 @@ m_PackageAssets:
         email: 
         url: 
       category: 
-      type: library
+      type: 
       description: 'Newtonsoft Json for use in Unity projects and Unity packages.
         Currently synced to version 12.0.2.
 
@@ -2731,9 +3025,27 @@ m_PackageAssets:
       errors: []
       versions:
         all:
+        - 1.0.0-preview.2
+        - 1.0.0-preview.3
+        - 1.0.0-preview.4
+        - 1.0.1-preview.1
+        - 1.1.2
+        - 2.0.0-preview
+        - 2.0.0-preview.1
+        - 2.0.0-preview.2
         - 2.0.0
+        - 2.0.1-preview.1
         compatible:
+        - 1.0.0-preview.2
+        - 1.0.0-preview.3
+        - 1.0.0-preview.4
+        - 1.0.1-preview.1
+        - 1.1.2
+        - 2.0.0-preview
+        - 2.0.0-preview.1
+        - 2.0.0-preview.2
         - 2.0.0
+        - 2.0.1-preview.1
         verified: 2.0.0
       dependencies: []
       resolvedDependencies: []
@@ -2750,7 +3062,7 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 0
+      datePublishedTicks: 637237898320000000
       documentationUrl: 
       hasRepository: 1
       repository:
@@ -2760,5 +3072,6 @@ m_PackageAssets:
         path: 
   m_LocalPackages:
     m_LocalFileStatus: []
-m_ProjectPath: C:/Users/tedki/Documents/Githug/CS4555-3D-Game-Project/Garbage Hunter/Packages
+m_ProjectPath: C:/Users/jeffr/Desktop/Unity Projects/CS4555-3D-Game-Project/Garbage
+  Hunter/Packages
 m_EditorVersion: 2020.3.17f1 (a4537701e4ab)
