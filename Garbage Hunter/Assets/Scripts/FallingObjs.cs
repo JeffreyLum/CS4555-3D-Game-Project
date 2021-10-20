@@ -80,12 +80,12 @@ public class FallingObjs : MonoBehaviour
 
         // positioning  (int)groundref.position.y + 
         int x1 = random.Next(12, 55);
-        int y1 = random.Next(200, 245);
+        int y1 = 400;
         int z1 = random.Next(-80, 250);
 
         curTrash.transform.parent = objsFall.gameObject.transform;
 
-        curTrash.transform.position = new Vector3(x1, y1, z1);
+        curTrash.transform.position = new Vector3(x1, groundref.position.y + y1, z1);
 
         // parrent
         // set gragity, pickup
