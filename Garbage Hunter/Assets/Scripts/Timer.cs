@@ -8,14 +8,15 @@ using TMPro;
 public class Timer : MonoBehaviour
 {
 
+     public GameOver gameOver;
      float currentTime = 0f;
-     float startingTime = 60f;
+     float TimeLimit = 60f;
 
     [SerializeField] TMPro.TextMeshProUGUI countdownText;
 
     private void Start()
     {
-        currentTime = startingTime;
+        currentTime = TimeLimit;
     }
 
     private void Update()
@@ -25,7 +26,18 @@ public class Timer : MonoBehaviour
 
         if (currentTime <= 0)
         {
-            currentTime = 0;
+            currentTime = 0;            
+            GameOver();
+        }
+        else
+        {
+            gameOver.SetSpeedNormal();
         }
     }
+
+    public void GameOver()
+    {
+        gameOver.StartTimeSlow();
+    }
+   
 }
