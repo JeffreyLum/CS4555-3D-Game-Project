@@ -42,4 +42,14 @@ public class MouseLook : MonoBehaviour
     {
         this.targetFOV = targetFOV;
     }
+
+    public void CursorLock()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    public void CursorUnlock()
+    {
+        Cursor.lockState = CursorLockMode.Confined;
+    }
 }

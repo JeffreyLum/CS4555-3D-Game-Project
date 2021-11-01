@@ -6,18 +6,20 @@ using UnityEngine;
 public class EnterSort : MonoBehaviour
 {
     bool debounce = false;
-    float stored_speed=16;
+    float stored_speed = 16;
     private Collider hostage;
+    public RectTransform sortui;
     // Start is called before the first frame update
+
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void updatebool(bool input)
@@ -35,6 +37,7 @@ public class EnterSort : MonoBehaviour
                 var playermove = hostage.GetComponent<PlayerMovement>();
                 playermove.speed = stored_speed;
                 Cursor.lockState = CursorLockMode.Locked;
+                sortui.gameObject.SetActive(false);
             }
         }
     }
@@ -56,6 +59,9 @@ public class EnterSort : MonoBehaviour
                     hostage = other;
                     playermove.speed = 0;
                     debounce = true;
+
+                    sortui.gameObject.SetActive(true);
+
                     float inv_p = playermove.getInvSpace();
 
                     float trash_p = playermove.getTrash();
@@ -68,6 +74,8 @@ public class EnterSort : MonoBehaviour
             }
         }
     }
+
+
 
 
 
