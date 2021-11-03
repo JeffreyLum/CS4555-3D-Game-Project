@@ -28,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
 
     // Camera 
     public Camera playerCamera;
-   private MouseLook cameraFOV;
+    private MouseLook cameraFOV;
 
     // Allows for double jump
     public int jumpLimit = 1;

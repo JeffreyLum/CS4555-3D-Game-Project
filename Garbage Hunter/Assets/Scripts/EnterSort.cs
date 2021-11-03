@@ -1,15 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 //using System.Diagnostics;
 using UnityEngine;
+
 
 public class EnterSort : MonoBehaviour
 {
     bool debounce = false;
     float stored_speed = 16;
+    float divisor = 4;
     private Collider hostage;
     public RectTransform sortui;
     // Start is called before the first frame update
+
+    public Sprite trashsp;
+    public Sprite plasticsp;
+    public Sprite glasssp;
+    public Sprite papersp;
 
     void Start()
     {
@@ -38,6 +46,7 @@ public class EnterSort : MonoBehaviour
                 playermove.speed = stored_speed;
                 Cursor.lockState = CursorLockMode.Locked;
                 sortui.gameObject.SetActive(false);
+                debounce = false;
             }
         }
     }
@@ -60,8 +69,6 @@ public class EnterSort : MonoBehaviour
                     playermove.speed = 0;
                     debounce = true;
 
-                    sortui.gameObject.SetActive(true);
-
                     float inv_p = playermove.getInvSpace();
 
                     float trash_p = playermove.getTrash();
@@ -70,12 +77,53 @@ public class EnterSort : MonoBehaviour
                     float plastic_p = playermove.getPlastic();
 
 
+
+
+
+                    sortui.gameObject.SetActive(true);
+
+
                 }
             }
         }
+
     }
 
+    private void fillTable(Type input, int amount)
+    {
+        GameObject newOb = new GameObject();
+        newOb.AddComponent<Image>();
+        newOb.AddComponent<DragObjectUI>();
+        newOb.GetComponent<DragObjectUI>().setAmount(amount);
+        newOb.AddComponent<Rigidbody2D>();
+        newOb.GetComponent<Rigidbody2D>().gravityScale = 0;
+        newOb.AddComponent<BoxCollider2D>();
+        newOb.GetComponent<BoxCollider2D>().isTrigger = true;
 
+        if (input == Type.Trash)
+        {
+
+            newOb.GetComponent<Image>().sprite = trashsp;
+            newOb.GetComponent<DragObjectUI>().setType(Type.Trash);
+
+        } else if (input == Type.Plastic){
+            newOb.GetComponent<Image>().sprite = plasticsp;
+            newOb.GetComponent<DragObjectUI>().setType(Type.Plastic);
+        }
+        else if (input == Type.Paper)
+        {
+            newOb.GetComponent<Image>().sprite = papersp;
+            newOb.GetComponent<DragObjectUI>().setType(Type.Paper);
+        }
+        else if (input == Type.Glass)
+        {
+            newOb.GetComponent<Image>().sprite = glasssp;
+            newOb.GetComponent<DragObjectUI>().setType(Type.Glass   );
+        }
+
+        newOb.GetComponent<RectTransform>().SetParent(sortui.transform);
+        newOb.SetActive(true);
+    }
 
 
 
