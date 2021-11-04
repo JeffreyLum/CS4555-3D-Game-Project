@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 
+    public int PlayerScore = 0;
+
    private const float NORMAL_FOV = 90f;
    private const float HOOKSHOT_FOV = 120f;
 
@@ -335,6 +337,41 @@ public class PlayerMovement : MonoBehaviour
     {
         paper += 1;
         inventory.addValue();
+    }
+
+    public void removeTrash(int a)
+    {
+        trash -= a;
+        inventory.setValue((int)(trash + plastic + glass + paper));
+    }
+
+    public void removePaper(int a)
+    {
+        paper -= a;
+        inventory.setValue((int)(trash + plastic + glass + paper));
+    }
+
+    public void removePlastic(int a)
+    {
+        plastic -= a;
+        inventory.setValue((int)(trash + plastic + glass + paper));
+    }
+
+    public void removeGlass(int a)
+    {
+        glass -= a;
+        inventory.setValue( (int)(trash + plastic + glass + paper));
+    }
+
+    //POINT
+    public void addPoint(int a)
+    {
+        PlayerScore += a;
+    }
+
+    public int getPoint()
+    {
+        return PlayerScore;
     }
 
     //counter reset

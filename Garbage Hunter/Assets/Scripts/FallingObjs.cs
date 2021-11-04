@@ -91,6 +91,24 @@ public class FallingObjs : MonoBehaviour
         // set gragity, pickup
         curTrash.AddComponent<Rigidbody>();
         curTrash.AddComponent<PickUp>();
+        int tagrand = random.Next(1, 4);
+        switch (tagrand)
+        {
+            default:
+                break;
+            case 1:
+                curTrash.GetComponent<PickUp>().setType(Type.Trash);
+                break;
+            case 2:
+                curTrash.GetComponent<PickUp>().setType(Type.Trash);
+                break;
+            case 3:
+                curTrash.GetComponent<PickUp>().setType(Type.Trash);
+                break;
+            case 4:
+                curTrash.GetComponent<PickUp>().setType(Type.Trash);
+                break;
+        }
         curTrash.gameObject.tag = "Trash";
         Rigidbody rgbd = curTrash.GetComponent<Rigidbody>();
         rgbd.useGravity = true;

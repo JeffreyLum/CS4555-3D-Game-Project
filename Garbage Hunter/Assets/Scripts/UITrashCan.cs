@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UITrashCan : MonoBehaviour
 {
+
+    public PlayerMovement host;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +19,7 @@ public class UITrashCan : MonoBehaviour
         
     }
 
-   /* void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("Triggered");
         if (other.GetComponent("DragObjectUI"))
@@ -26,9 +29,22 @@ public class UITrashCan : MonoBehaviour
             if (a == Type.Trash)
             {
                 Debug.Log("TrAAAAAAAAAASH");
+                host.addPoint(some.getAmount());
+                Destroy(other.gameObject);
+            } else if (a == Type.Plastic)
+            {
+                Debug.Log("plastic");
+            }
+            else if (a == Type.Glass)
+            {
+                Debug.Log("glaasss");
+            }
+            else if (a == Type.Paper)
+            {
+                Debug.Log("papper");
             }
 
         }
-    } */
+    }
 
 }

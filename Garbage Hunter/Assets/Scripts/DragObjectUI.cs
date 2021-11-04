@@ -8,6 +8,11 @@ public class DragObjectUI : MonoBehaviour, IDragHandler
     [SerializeField] private RectTransform dragImage;
     public Type type;
     public int Amount;
+
+    void Start()
+    {
+        GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
+    }
      
     public void OnDrag(PointerEventData eventData)
     {

@@ -80,6 +80,16 @@ public class PickUp : MonoBehaviour
         }
     }
 
+    public void setType(Type input)
+    {
+        type = input;
+    }
+
+    public Type getType()
+    {
+        return this.type;
+    }
+
 
 
 }
