@@ -8,9 +8,9 @@ using TMPro;
 public class Timer : MonoBehaviour
 {
 
-     public GameOver gameOver;
-     float currentTime = 0f;
-     float TimeLimit = 360f;
+    public GameOver gameOver;
+    float currentTime = 0f;
+    float TimeLimit = 360f;
     public MouseLook mouselook;
 
     [SerializeField] TMPro.TextMeshProUGUI countdownText;
@@ -27,7 +27,7 @@ public class Timer : MonoBehaviour
 
         if (currentTime <= 0)
         {
-            currentTime = 0;            
+            currentTime = 0;
             GameOver();
         }
         else
@@ -41,5 +41,5 @@ public class Timer : MonoBehaviour
         gameOver.StartTimeSlow();
         mouselook.CursorUnlock();
     }
-   
+
 }

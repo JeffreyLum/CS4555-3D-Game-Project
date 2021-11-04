@@ -16,7 +16,7 @@ public class UITrashCan : MonoBehaviour
         
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+   /* void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log("Triggered");
         if (other.GetComponent("DragObjectUI"))
@@ -29,6 +29,6 @@ public class UITrashCan : MonoBehaviour
             }
 
         }
-    }
+    } */
 
 }

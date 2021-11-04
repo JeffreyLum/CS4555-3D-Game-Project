@@ -40,6 +40,8 @@ public class PlayerMovement : MonoBehaviour
     // Dashing
     public float dashSpeed;
     public float dashTime;
+    public float dashCooldown = 2f; // Cooldown of dash
+    private float dashNextDash = 0f; // Cooldown until the NEXT dash
 
     private State state;
     private enum State
@@ -152,9 +154,14 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // Allows the character to dash
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Time.time > dashNextDash)
         {
-            StartCoroutine(Dash());
+            if (Input.GetKeyDown(KeyCode.LeftShift))
+            {
+                StartCoroutine(Dash());
+                Debug.Log("Dashed... Cooldown started... hopefully...");
+                dashNextDash = Time.time + dashCooldown;
+            }
         }
 
     }
@@ -244,7 +251,7 @@ public class PlayerMovement : MonoBehaviour
             float jumpSpeed = 40f;
             characterVelocityMomentum += Vector3.up * jumpSpeed;
 
-
+            dashNextDash = 0;
             StopHookshot();
 
         }

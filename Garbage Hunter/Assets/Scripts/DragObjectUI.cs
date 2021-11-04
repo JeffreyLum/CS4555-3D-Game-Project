@@ -8,7 +8,7 @@ public class DragObjectUI : MonoBehaviour, IDragHandler
     [SerializeField] private RectTransform dragImage;
     public Type type;
     public int Amount;
-
+     
     public void OnDrag(PointerEventData eventData)
     {
         var a = GetComponent<RectTransform>();
