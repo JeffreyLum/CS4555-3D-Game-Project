@@ -26,7 +26,7 @@ public class PickUp : MonoBehaviour
     {
         if (debounce == false)
         {
-            if (other.tag == "Player") // If the collision area touches the player, the object gets destroyed.
+            if (other.gameObject.tag == "Player") // If the collision area touches the player, the object gets destroyed.
             {
 
                 if (other.GetComponent<PlayerMovement>())

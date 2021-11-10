@@ -123,7 +123,7 @@ public class FallingObjs : MonoBehaviour
         // So it spawns at the same place as the parent
         col.transform.position = new Vector3(curTrash.transform.position.x, curTrash.transform.position.y, curTrash.transform.position.z);
         //  sets how big the detection box should be
-        col.size = new Vector3(3, 3, 3);
+        col.size = new Vector3(5, 5, 5);
         col.isTrigger = true;
 
     }
