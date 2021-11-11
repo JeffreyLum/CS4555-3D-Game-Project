@@ -11,7 +11,8 @@ public class EnterSort : MonoBehaviour
     float stored_speed = 16;
     float divisor = 4;
     private Collider hostage;
-    public RectTransform sortui;
+    public RectTransform sortui; 
+    public RectTransform score;
 
     private System.Random random;
     // Start is called before the first frame update
@@ -23,7 +24,6 @@ public class EnterSort : MonoBehaviour
 
     void Start()
     {
-        random = new System.Random();
     }
 
     // Update is called once per frame
@@ -63,7 +63,7 @@ public class EnterSort : MonoBehaviour
 
                 if (other.GetComponent<PlayerMovement>())
                 {
-
+                    random = new System.Random();
                     var playermove = other.GetComponent<PlayerMovement>();
                     Cursor.lockState = CursorLockMode.Confined;
                     stored_speed = playermove.speed;
@@ -144,6 +144,8 @@ public class EnterSort : MonoBehaviour
 
 
                     sortui.gameObject.SetActive(true);
+                    score.gameObject.SetActive(false);
+                    score.gameObject.SetActive(true);
 
 
                 }
@@ -172,6 +174,11 @@ public class EnterSort : MonoBehaviour
 
         int x1 = random.Next(-500,300);
         int y1 = random.Next(-200,200);
+        Vector2 pos = new Vector2(x1,y1);
+        Debug.Log(x1);
+        Debug.Log(y1);
+        Debug.Log(pos);
+        newOb.GetComponent<RectTransform>().position = pos;
 
         if (input == Type.Trash)
         {
@@ -221,7 +228,6 @@ public class EnterSort : MonoBehaviour
 
         newOb.GetComponent<RectTransform>().sizeDelta = new Vector2(sizex, sizey);
         newOb.GetComponent<BoxCollider2D>().size = new Vector2(hitx,hity);
-        newOb.GetComponent<RectTransform>().position = new Vector2(x1, y1);
         newOb.GetComponent<RectTransform>().SetParent(sortui.transform);
         newOb.SetActive(true);
     }
