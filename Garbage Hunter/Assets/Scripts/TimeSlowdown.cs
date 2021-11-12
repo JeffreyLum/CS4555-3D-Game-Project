@@ -7,6 +7,11 @@ public class TimeSlowdown : MonoBehaviour
 
     public float timeSlowFactor = 0.02f;
 
+    private void Start()
+    {
+        NormalSpeed();
+    }
+
     private void Update()
     {
     }
@@ -20,6 +25,7 @@ public class TimeSlowdown : MonoBehaviour
 
     public void NormalSpeed()
     {
-        Time.timeScale = Mathf.Clamp(Time.timeScale, 0f, 1f);
+        Time.timeScale = 1f;
+        Time.fixedDeltaTime = Time.timeScale;
     }
 }

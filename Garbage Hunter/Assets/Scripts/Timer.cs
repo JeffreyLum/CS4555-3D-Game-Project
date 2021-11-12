@@ -10,7 +10,7 @@ public class Timer : MonoBehaviour
 
     public GameOver gameOver;
     float currentTime = 0f;
-    float TimeLimit = 360f;
+    float TimeLimit = 5f;
     public MouseLook mouselook;
 
     [SerializeField] TMPro.TextMeshProUGUI countdownText;
@@ -29,10 +29,6 @@ public class Timer : MonoBehaviour
         {
             currentTime = 0;
             GameOver();
-        }
-        else
-        {
-            gameOver.SetSpeedNormal();
         }
     }
 
