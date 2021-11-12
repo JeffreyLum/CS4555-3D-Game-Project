@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 //using System.Diagnostics;
 using UnityEngine;
- 
+
 
 public class EnterSort : MonoBehaviour
 {
@@ -11,7 +11,7 @@ public class EnterSort : MonoBehaviour
     float stored_speed = 16;
     float divisor = 4;
     private Collider hostage;
-    public RectTransform sortui; 
+    public RectTransform sortui;
     public RectTransform score;
 
     private System.Random random;
@@ -84,8 +84,9 @@ public class EnterSort : MonoBehaviour
                         {
                             fillTable(Type.Trash, (int)divisor);
                             trash_p -= divisor;
-                            playermove.removeTrash((int) divisor);
-                        } else
+                            playermove.removeTrash((int)divisor);
+                        }
+                        else
                         {
                             fillTable(Type.Trash, (int)trash_p);
                             playermove.removeTrash((int)trash_p);
@@ -166,19 +167,19 @@ public class EnterSort : MonoBehaviour
         newOb.GetComponent<BoxCollider2D>().isTrigger = true;
         newOb.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
 
-        int sizex=0;
-        int sizey=0;
+        int sizex = 0;
+        int sizey = 0;
 
-        int hitx=0;
-        int hity=0;
+        int hitx = 0;
+        int hity = 0;
 
-        int x1 = random.Next(-500,300);
-        int y1 = random.Next(-200,200);
-        Vector2 pos = new Vector2(x1,y1);
+        int x1 = 500+random.Next(-500, 300);
+        int y1 = 200+random.Next(-200, 200);
+        Vector2 pos = new Vector2(x1, y1);
         Debug.Log(x1);
         Debug.Log(y1);
         Debug.Log(pos);
-        newOb.GetComponent<RectTransform>().position = pos;
+        newOb.GetComponent<RectTransform>().anchoredPosition = pos / sortui.GetComponent<Canvas>().scaleFactor;
 
         if (input == Type.Trash)
         {
@@ -191,9 +192,11 @@ public class EnterSort : MonoBehaviour
             hitx = 310;
             hity = 172;
 
-            
 
-        } else if (input == Type.Plastic){
+
+        }
+        else if (input == Type.Plastic)
+        {
             newOb.GetComponent<Image>().sprite = plasticsp;
             newOb.GetComponent<DragObjectUI>().setType(Type.Plastic);
 
@@ -227,7 +230,7 @@ public class EnterSort : MonoBehaviour
         }
 
         newOb.GetComponent<RectTransform>().sizeDelta = new Vector2(sizex, sizey);
-        newOb.GetComponent<BoxCollider2D>().size = new Vector2(hitx,hity);
+        newOb.GetComponent<BoxCollider2D>().size = new Vector2(hitx, hity);
         newOb.GetComponent<RectTransform>().SetParent(sortui.transform);
         newOb.SetActive(true);
     }
