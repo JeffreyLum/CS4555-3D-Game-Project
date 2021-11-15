@@ -12,7 +12,7 @@ public class FallingObjs : MonoBehaviour
     public int level = 1;
     private System.Random random;
 
-    public Transform groundref;
+    // public Transform groundref;
 
 
 
@@ -55,6 +55,9 @@ public class FallingObjs : MonoBehaviour
         print("creating obj");
         GameObject curTrash;
         GameObject detector;
+        int x1;
+        int y1;
+        int z1;
 
         if (type == 1) // Blue Cube for Decomposable
 
@@ -79,13 +82,25 @@ public class FallingObjs : MonoBehaviour
         }
 
         // positioning  (int)groundref.position.y + 
-        int x1 = random.Next(12, 55);
-        int y1 = 400;
-        int z1 = random.Next(-80, 250);
+        int T_or_I = random.Next(1, 3);
+
+        if (T_or_I == 1)  // 1 = T shape spawing 
+        {
+            x1 = random.Next(-110, 195);
+            y1 = 400;
+            z1 = random.Next(-200, -165);
+        }
+        else  // i  shape spawing
+        {
+            x1 = random.Next(20, 65);
+            y1 = 400;
+            z1 = random.Next(-300, 500);
+        }
+
 
         curTrash.transform.parent = objsFall.gameObject.transform;
-
-        curTrash.transform.position = new Vector3(x1, groundref.position.y + y1, z1);
+        // groundref.position.
+        curTrash.transform.position = new Vector3(x1, y1, z1);
 
         // parrent
         // set gragity, pickup
@@ -112,7 +127,7 @@ public class FallingObjs : MonoBehaviour
         curTrash.gameObject.tag = "Trash";
         Rigidbody rgbd = curTrash.GetComponent<Rigidbody>();
         rgbd.useGravity = true;
-        rgbd.drag = 2;
+        rgbd.drag = 1;
 
 
         // set Collision
