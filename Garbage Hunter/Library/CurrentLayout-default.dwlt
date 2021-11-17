@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1798
     height: 1021
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Game
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
@@ -122,7 +122,7 @@ MonoBehaviour:
   m_MinSize: {x: 877, y: 492}
   m_MaxSize: {x: 16002, y: 14042}
   vertical: 0
-  controlID: 317
+  controlID: 1048
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -147,7 +147,7 @@ MonoBehaviour:
   m_MinSize: {x: 602, y: 492}
   m_MaxSize: {x: 12002, y: 14042}
   vertical: 1
-  controlID: 318
+  controlID: 1049
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -173,7 +173,7 @@ MonoBehaviour:
   m_MinSize: {x: 602, y: 221}
   m_MaxSize: {x: 12002, y: 4021}
   vertical: 0
-  controlID: 319
+  controlID: 1050
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -429,7 +429,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 50fbffff
+      m_ExpandedIDs: 2ee0feffd82bffffbc70ffff94b5ffff50fbffff6ab200006cbe00004ac1000084180100a4210100cc250100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -489,9 +489,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -23.508562, y: 103.911064, z: -63.851498}
+    m_Target: {x: 474.00018, y: 518.7263, z: 0}
     speed: 2
-    m_Value: {x: -23.508562, y: 103.911064, z: -63.851498}
+    m_Value: {x: 474.00018, y: 518.7263, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -542,9 +542,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: -0.14921805, y: -0.054278474, z: 0.0081728175, w: -0.9873031}
   m_Size:
-    m_Target: 557.67224
+    m_Target: 80.77871
     speed: 2
-    m_Value: 557.67224
+    m_Value: 80.77871
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -607,13 +607,13 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Peter\Desktop\CS4555-3D-Game-Project\Garbage Hunter
   m_LockTracker:
@@ -677,7 +677,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c623000000000000ece303000eed17002aee17007c550000ec540000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
