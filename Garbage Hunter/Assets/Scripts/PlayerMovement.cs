@@ -116,6 +116,7 @@ public class PlayerMovement : MonoBehaviour
         }
         if (Input.GetButtonDown("Jump") && jumpLimit != 0)
         {
+            FindObjectOfType<AudioManager>().Play("Jump");
             velocity = Mathf.Sqrt(jumpHeight * -2f * gravity);
             jumpLimit--;
         }
@@ -170,6 +171,8 @@ public class PlayerMovement : MonoBehaviour
 
     IEnumerator Dash()
     {
+        FindObjectOfType<AudioManager>().Play("Dash");
+
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
@@ -246,6 +249,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (InputJumpHookshot())
         {
+            FindObjectOfType<AudioManager>().Play("Jump");
             //Cancel Hookshot via jumping
             float momentumSpeed = 4f;
             characterVelocityMomentum = hookshotDirection * hookshotSpeed * momentumSpeed;
