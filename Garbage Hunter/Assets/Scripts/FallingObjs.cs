@@ -12,10 +12,6 @@ public class FallingObjs : MonoBehaviour
     public int level = 1;
     private System.Random random;
 
-    // public Transform groundref;
-
-
-
     // Start is called before the first frame update
     void Start()
     {
@@ -28,24 +24,16 @@ public class FallingObjs : MonoBehaviour
         InvokeRepeating("createType", startT, x);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 
     // create ramdon type of trash
     void createType()
     {
-
-        int type = random.Next(1, 4);
+        int type = random.Next(1, 5);
         createObjs(type);
         countObjs++;
         // if total number of trash reach the level of difficulty, stop
         if (countObjs == level * 25)
-        {
-            CancelInvoke();
-        }
+        { CancelInvoke(); }
     }
 
     // Create trash and set up its properties like gravity, falling speed, collision, and position, parrent class,
@@ -60,43 +48,54 @@ public class FallingObjs : MonoBehaviour
         int z1;
 
         if (type == 1) // Blue Cube for Decomposable
-
         {
             curTrash = GameObject.CreatePrimitive(PrimitiveType.Cube);
             var cubeRenderer = curTrash.GetComponent<Renderer>();
             cubeRenderer.material.SetColor("_Color", Color.blue);
+            //curTrash.gameObject.tag = "Glass";
+            curTrash.AddComponent<PickUp>();
+            curTrash.GetComponent<PickUp>().setType(Type.Glass);
         }
         else if (type == 2) //Green Cylinder for Recyclable
-
         {
             curTrash = GameObject.CreatePrimitive(PrimitiveType.Cylinder);
             var cubeRenderer = curTrash.GetComponent<Renderer>();
             cubeRenderer.material.SetColor("_Color", Color.green);
+            curTrash.AddComponent<PickUp>();
+            curTrash.GetComponent<PickUp>().setType(Type.Paper);
+        }
+        else if (type == 3) //Green Cylinder for Recyclable
+        {
+            curTrash = GameObject.CreatePrimitive(PrimitiveType.Capsule);
+            var cubeRenderer = curTrash.GetComponent<Renderer>();
+            cubeRenderer.material.SetColor("_Color", Color.white);
+            curTrash.AddComponent<PickUp>();
+            curTrash.GetComponent<PickUp>().setType(Type.Plastic);
         }
         else    // Black sphere for Harmful Landfill
-
         {
             curTrash = GameObject.CreatePrimitive(PrimitiveType.Sphere);
             var cubeRenderer = curTrash.GetComponent<Renderer>();
             cubeRenderer.material.SetColor("_Color", Color.black);
+            curTrash.AddComponent<PickUp>();
+            curTrash.GetComponent<PickUp>().setType(Type.Trash);
         }
 
         // positioning  (int)groundref.position.y + 
-        int T_or_I = random.Next(1, 3);
+        int T_or_I = random.Next(1, 4);
 
         if (T_or_I == 1)  // 1 = T shape spawing 
         {
             x1 = random.Next(-110, 195);
-            y1 = 400;
+            y1 = 200;
             z1 = random.Next(-200, -165);
         }
         else  // i  shape spawing
         {
             x1 = random.Next(20, 65);
-            y1 = 400;
+            y1 = 200;
             z1 = random.Next(-300, 500);
         }
-
 
         curTrash.transform.parent = objsFall.gameObject.transform;
         // groundref.position.
@@ -105,30 +104,12 @@ public class FallingObjs : MonoBehaviour
         // parrent
         // set gragity, pickup
         curTrash.AddComponent<Rigidbody>();
-        curTrash.AddComponent<PickUp>();
-        int tagrand = random.Next(1, 4);
-        switch (tagrand)
-        {
-            default:
-                break;
-            case 1:
-                curTrash.GetComponent<PickUp>().setType(Type.Trash);
-                break;
-            case 2:
-                curTrash.GetComponent<PickUp>().setType(Type.Trash);
-                break;
-            case 3:
-                curTrash.GetComponent<PickUp>().setType(Type.Trash);
-                break;
-            case 4:
-                curTrash.GetComponent<PickUp>().setType(Type.Trash);
-                break;
-        }
-        curTrash.gameObject.tag = "Trash";
+        // curTrash.AddComponent<PickUp>();
+
+        //curTrash.gameObject.tag = "Trash";
         Rigidbody rgbd = curTrash.GetComponent<Rigidbody>();
         rgbd.useGravity = true;
         rgbd.drag = 1;
-
 
         // set Collision
         detector = new GameObject("Collision Detector");
