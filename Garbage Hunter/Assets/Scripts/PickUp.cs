@@ -21,7 +21,10 @@ public class PickUp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (gameObject.transform.position.y < 140.2825)
+        {
+            gameObject.transform.position = new Vector3(gameObject.transform.position.x, (float) 140.2825, gameObject.transform.position.z);
+        }
     }
     private void OnTriggerEnter(Collider other)
     {
