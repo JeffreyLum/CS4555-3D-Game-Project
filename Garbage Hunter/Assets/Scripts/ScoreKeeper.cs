@@ -15,13 +15,14 @@ public class ScoreKeeper : MonoBehaviour
     {
         float interval = 0.1f;
         // keep track of score
-        InvokeRepeating("checkScore", 2, interval);
+       // InvokeRepeating("checkScore", 2, interval);
     }
 
     // Update is called once per frame
     void Update()
     {
-        gameObject.GetComponent<Text>().text = myText;
+        cur_Score = player.getPoint();
+        gameObject.GetComponent<Text>().text = cur_Score + "";
     }
 
 

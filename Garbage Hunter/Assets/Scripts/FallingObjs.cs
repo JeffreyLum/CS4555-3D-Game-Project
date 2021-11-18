@@ -10,11 +10,19 @@ public class FallingObjs : MonoBehaviour
     private int countObjs = 0;
     // Level of difficulty. Falling speed and total number of trash varies depends on this level. TODO: make it be set at the start of game
     public int level = 1;
+    private int amount; //object drop scaling
     private System.Random random;
 
     // Start is called before the first frame update
     void Start()
     {
+        LevelStart();
+    }
+
+    public void LevelStart()
+    {
+        amount = level * 25;
+        x = (float)(62.5* (double)(Math.Floor( (double)(1+((double)amount /100))) ) / (double)amount);
         random = new System.Random();
         objsFall = new GameObject("Falling");
         objsFall.transform.parent = this.gameObject.transform;
@@ -24,7 +32,25 @@ public class FallingObjs : MonoBehaviour
         InvokeRepeating("createType", startT, x);
     }
 
+    public void levelplus()
+    {
+        level += 1;
+    }
 
+    public int getlevel()
+    {
+        return level;
+    }
+
+    public int getgradeavg()
+    {
+        return (int)Math.Floor(amount * 0.75);
+    }
+
+    public int getfull()
+    {
+        return amount;
+    }
     // create ramdon type of trash
     void createType()
     {
@@ -87,13 +113,13 @@ public class FallingObjs : MonoBehaviour
         if (T_or_I == 1)  // 1 = T shape spawing 
         {
             x1 = random.Next(-110, 195);
-            y1 = 200;
+            y1 = 400;
             z1 = random.Next(-200, -165);
         }
         else  // i  shape spawing
         {
             x1 = random.Next(20, 65);
-            y1 = 200;
+            y1 = 400;
             z1 = random.Next(-300, 500);
         }
 

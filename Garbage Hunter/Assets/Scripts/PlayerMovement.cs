@@ -64,6 +64,16 @@ public class PlayerMovement : MonoBehaviour
     public float paper=0;
 
 
+    // PowerBank
+
+    public float p1 = 0; // speed (1 * n)
+    public float p2 = 0; //jump height? (? * n)
+    public float p3 = 0; //increase jump count?? (1 +n) 
+    public float p4 = 0; //inventory space?? (+5*n)?
+    public float p5 = 0; //reduce dash cooldown?? (
+
+
+
     // Start is called before the first frame update
     void Start()
     {
