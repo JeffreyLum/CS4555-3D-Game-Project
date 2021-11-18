@@ -102,6 +102,7 @@ public class PlayerMovement : MonoBehaviour
                 HandleHookshotMovement();
                 break;
         }
+        inventory.setValue((int)(trash + plastic + glass + paper));
     }
 
     void LateUpdate()
@@ -334,47 +335,39 @@ public class PlayerMovement : MonoBehaviour
     public void addTrash()
     {
         trash += 1;
-        inventory.addValue();
     }
 
     public void addPlastic()
     {
         plastic +=1;
-        inventory.addValue();
     }
     public void addGlass()
     {
         glass += 1;
-        inventory.addValue();
     }
     public void addPaper()
     {
         paper += 1;
-        inventory.addValue();
     }
 
     public void removeTrash(int a)
     {
         trash -= a;
-        inventory.setValue((int)(trash + plastic + glass + paper));
     }
 
     public void removePaper(int a)
     {
         paper -= a;
-        inventory.setValue((int)(trash + plastic + glass + paper));
     }
 
     public void removePlastic(int a)
     {
         plastic -= a;
-        inventory.setValue((int)(trash + plastic + glass + paper));
     }
 
     public void removeGlass(int a)
     {
         glass -= a;
-        inventory.setValue( (int)(trash + plastic + glass + paper));
     }
 
     //POINT
@@ -413,8 +406,6 @@ public class PlayerMovement : MonoBehaviour
             glass = 0;
             output = true;
         }
-
-        inventory.setValue(0);
 
         return output;
     }

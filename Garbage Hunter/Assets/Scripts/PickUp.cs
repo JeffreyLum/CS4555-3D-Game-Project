@@ -7,6 +7,7 @@ public class PickUp : MonoBehaviour
     // Start is called before the first frame update
     public Type type;
     private bool debounce = false;
+    public Timer timekeeper;
 
     void Start()
     {

@@ -21,15 +21,20 @@ public class FallingObjs : MonoBehaviour
 
     public void LevelStart()
     {
+        countObjs = 0;
         amount = level * 25;
         x = (float)(62.5* (double)(Math.Floor( (double)(1+((double)amount /100))) ) / (double)amount);
         random = new System.Random();
         objsFall = new GameObject("Falling");
         objsFall.transform.parent = this.gameObject.transform;
 
-        objsFall.gameObject.tag = "Trash";
         // create falling obj on every x seconds untill the counter = level * 25 
         InvokeRepeating("createType", startT, x);
+    }
+
+    public GameObject getlevelgroup()
+    {
+        return objsFall;
     }
 
     public void levelplus()

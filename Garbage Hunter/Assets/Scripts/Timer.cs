@@ -48,6 +48,7 @@ public class Timer : MonoBehaviour
         if (currentTime <= 0)
         {
             currentTime = 0;
+            Debug.Log("oldscore= " + oldscore);
             if (ingame == true)
             {
                 if (player.getPoint() >= fobj.getgradeavg())
@@ -56,6 +57,12 @@ public class Timer : MonoBehaviour
                     intermission = true;
                     currentTime = 15;
                     oldscore = player.getPoint();
+                    GameObject temp = fobj.getlevelgroup();
+                    if (temp != null)
+                    {
+                        Destroy(temp);
+                    }
+                    player.resetInv();
                 }
                 else
                 {
@@ -67,6 +74,7 @@ public class Timer : MonoBehaviour
                 intermission = false;
                 currentTime = TimeLimit;
                 fobj.levelplus();
+                fobj.LevelStart();
             }
         }
     }
