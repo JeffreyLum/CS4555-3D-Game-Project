@@ -46,10 +46,12 @@ public class MouseLook : MonoBehaviour
     public void CursorLock()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        mouseSensitivity = 100;
     }
 
     public void CursorUnlock()
     {
         Cursor.lockState = CursorLockMode.Confined;
+        mouseSensitivity = 0;
     }
 }

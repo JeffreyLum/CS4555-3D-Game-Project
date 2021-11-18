@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
 
    private const float NORMAL_FOV = 90f;
    private const float HOOKSHOT_FOV = 120f;
+    //private bool playerlock = false;
 
     private int lowestfloor = -40;
 
@@ -45,12 +46,15 @@ public class PlayerMovement : MonoBehaviour
     public float dashCooldown = 2f; // Cooldown of dash
     private float dashNextDash = 0f; // Cooldown until the NEXT dash
 
+    private State oldstate;
+
     private State state;
     private enum State
     {
         Normal,
         HookshotFly,
-        HookshotThrown
+        HookshotThrown,
+        Locked
     }
 
     //Inventory
@@ -101,6 +105,8 @@ public class PlayerMovement : MonoBehaviour
             case State.HookshotFly:
                 HandleHookshotMovement();
                 break;
+            case State.Locked:
+                break;
         }
         inventory.setValue((int)(trash + plastic + glass + paper));
     }
@@ -111,6 +117,19 @@ public class PlayerMovement : MonoBehaviour
         {
             controller.transform.position = new Vector3(37,10,-43);
         }
+    }
+
+    public void sortlock()
+    {
+        oldstate = state;
+        state = State.Locked;
+        cameraFOV.CursorUnlock();
+    }
+
+    public void sortunlock()
+    {
+        state = oldstate;
+        cameraFOV.CursorLock();
     }
 
     private void playerMovement()

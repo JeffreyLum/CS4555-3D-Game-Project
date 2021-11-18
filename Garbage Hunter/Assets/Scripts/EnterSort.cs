@@ -46,7 +46,7 @@ public class EnterSort : MonoBehaviour
             {
                 var playermove = hostage.GetComponent<PlayerMovement>();
                 playermove.speed = stored_speed;
-                Cursor.lockState = CursorLockMode.Locked;
+                playermove.sortunlock();
                 sortui.gameObject.SetActive(false);
                 debounce = false;
             }
@@ -65,7 +65,8 @@ public class EnterSort : MonoBehaviour
                 {
                     random = new System.Random();
                     var playermove = other.GetComponent<PlayerMovement>();
-                    Cursor.lockState = CursorLockMode.Confined;
+
+                    playermove.sortlock();
                     stored_speed = playermove.speed;
                     hostage = other;
                     playermove.speed = 0;
