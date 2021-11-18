@@ -26,6 +26,9 @@ public class Timer : MonoBehaviour
     {
         TimeLimit = (1+(fobj.getlevel()/(100))) * 300;
         currentTime = TimeLimit;
+
+       // Time.timeScale = 1f;
+       // Time.fixedDeltaTime = Time.timeScale;
     }
 
     private void Update()
@@ -72,9 +75,10 @@ public class Timer : MonoBehaviour
             {
                 ingame = true;
                 intermission = false;
-                currentTime = TimeLimit;
                 fobj.levelplus();
                 fobj.LevelStart();
+                TimeLimit = (1 + (fobj.getlevel() / (100))) * 300;
+                currentTime = TimeLimit;
             }
         }
     }

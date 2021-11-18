@@ -8,12 +8,12 @@ public class ScoreKeeper : MonoBehaviour
 {
     public PlayerMovement player;
     int cur_Score = 0;
-    string myText = "0";
+    //string myText = "0";
 
     // Start is called before the first frame update
     void Start()
     {
-        float interval = 0.1f;
+        //float interval = 0.1f;
         // keep track of score
        // InvokeRepeating("checkScore", 2, interval);
     }
@@ -45,7 +45,7 @@ public class ScoreKeeper : MonoBehaviour
         gameObject.GetComponent<Text>().color = Color.green;
         gameObject.GetComponent<Text>().fontSize = 25;
         //  Giving player 5 seconds to be ready 
-        myText = "You Won! Next Challenge in 5 Sec";
+       // myText = "You Won! Next Challenge in 5 Sec";
         InvokeRepeating("loadNextScene", 5, 5);
         Debug.Log("calling Next scece");
 

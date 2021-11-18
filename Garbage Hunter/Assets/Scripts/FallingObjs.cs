@@ -135,7 +135,7 @@ public class FallingObjs : MonoBehaviour
         // parrent
         // set gragity, pickup
         curTrash.AddComponent<Rigidbody>();
-        // curTrash.AddComponent<PickUp>();
+        //curTrash.AddComponent<PickUp>();
 
         //curTrash.gameObject.tag = "Trash";
         Rigidbody rgbd = curTrash.GetComponent<Rigidbody>();
