@@ -9,6 +9,13 @@ public class MainMenu : MonoBehaviour
     public int Option = 1;
     public GameObject MM;
     public GameObject DS;
+    public GameObject TR;
+
+    public GameObject p1;
+    public GameObject p2;
+
+    public int page = 1;
+    public int mpage = 2;
 
 
     public void OpenDiff()
@@ -16,6 +23,57 @@ public class MainMenu : MonoBehaviour
         Debug.Log("Scene Launched");
         MM.SetActive(false);
         DS.SetActive(true);
+    }
+
+    public void OpenTutorial()
+    {
+        MM.SetActive(false);
+        DS.SetActive(false);
+        TR.SetActive(true);
+        page = 1;
+        openpage();
+    }
+
+    public void OpenMM()
+    {
+        MM.SetActive(true);
+        DS.SetActive(false);
+        TR.SetActive(false);
+    }
+
+    public void openpage()
+    {
+        switch (page)
+        {
+            default:
+                break;
+            case 1:
+                p1.SetActive(true);
+                p2.SetActive(false);
+                break;
+            case 2:
+                p1.SetActive(false);
+                p2.SetActive(true);
+                break;
+        }
+    }
+
+    public void nextpage()
+    {
+        if (page < mpage)
+        {
+            page += 1;
+        }
+        openpage();
+    }
+
+    public void prevpage()
+    {
+        if (page > 0)
+        {
+            page -= 1;
+        }
+        openpage();
     }
 
     public void setEasy()
