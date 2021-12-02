@@ -13,6 +13,7 @@ public class EnterSort : MonoBehaviour
     private Collider hostage;
     public RectTransform sortui;
     public RectTransform score;
+    float count = 0;
 
     private System.Random random;
     // Start is called before the first frame update
@@ -78,7 +79,7 @@ public class EnterSort : MonoBehaviour
                     float paper_p = playermove.getPaper();
                     float glass_p = playermove.getGlass();
                     float plastic_p = playermove.getPlastic();
-
+                    count += 1;
                     while (trash_p > 0)
                     {
                         if (trash_p >= divisor)
@@ -176,10 +177,17 @@ public class EnterSort : MonoBehaviour
 
         int x1 = 500+random.Next(-500, 300);
         int y1 = 200+random.Next(-200, 200);
+        if (count >= 2)
+        {
+            x1 = 400 + random.Next(-400, 600);
+            y1 = 200 + random.Next(-200, 400);
+        }
         Vector2 pos = new Vector2(x1, y1);
+        Vector2 pos2 = new Vector2(0, 0);
         Debug.Log(x1);
         Debug.Log(y1);
         Debug.Log(pos);
+        newOb.GetComponent<RectTransform>().pivot = pos2;
         newOb.GetComponent<RectTransform>().anchoredPosition = pos / sortui.GetComponent<Canvas>().scaleFactor;
 
         if (input == Type.Trash)
@@ -229,6 +237,18 @@ public class EnterSort : MonoBehaviour
             hitx = 195;
             hity = 266;
         }
+
+       /* if (newOb.GetComponent<RectTransform>().position.x <= 0 || newOb.GetComponent<RectTransform>().position.y <= 0)
+        {
+            Debug.Log("negative?");
+            x1 = 510 + random.Next(-500, 300);
+            y1 = 210 + random.Next(-200, 200);
+            pos = new Vector2(x1, y1);
+            Debug.Log(x1);
+            Debug.Log(y1);
+            Debug.Log(pos);
+            newOb.GetComponent<RectTransform>().anchoredPosition = pos / sortui.GetComponent<Canvas>().scaleFactor;
+        } */
 
         newOb.GetComponent<RectTransform>().sizeDelta = new Vector2(sizex, sizey);
         newOb.GetComponent<BoxCollider2D>().size = new Vector2(hitx, hity);
