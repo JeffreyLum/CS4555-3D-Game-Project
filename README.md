@@ -1,10 +1,10 @@
 ### CS4555-3D-Game-Project 👋
-Team Name: 4-1Devs 4+3 4+3 4+3 Interactive Studios
-Team Members: Jeffrey Lum, Ted Kim, Yunjian Lu
+- Team Name: 4-1Devs 4+3 4+3 4+3 Interactive Studios
+- Team Members: Jeffrey Lum, Ted Kim, Yunjian Lu
 
-## Logline:
+:pushpin:	## Logline:
 The trash is falling into the city, and you control the main character with various movements and tools to pick up all the garbage and sort them within the given time limit.
-## Story:
+:pushpin:	## Story:
 The City of Atlantis! It used to be a clean, modern, and beautiful city. But, as the main character (Mellann) looks and walks around, she finds that the city is filthy and filled with trash! Suddenly, something fell on her head and dropped to the floor. It is a plastic bottle. She looks up and disaster ensues as she sees all kinds of garbage falling from the sky. Fuming with rage, Mellann is going to make sure to clean up the mess and keep the city clean. And she needs your help.
 ## Gameplay:
 Garbage Hunter is a platformer and educational game. The Player will use the keyboard and mouse as input devices, take all the means to collect and bring the trash to the bins, and sort the garbage between the different classifications. The game would be over if time runs out or if the player has not sorted enough trash.  The Player has to sort the trash correctly to score enough points to win and enter the next challenge. 
