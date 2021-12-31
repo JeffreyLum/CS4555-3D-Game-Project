@@ -11,7 +11,6 @@ Garbage Hunter is a platformer and educational game. The Player will use the key
 
 # :computer_mouse:	 Controls (Keyboard & Mouse):    
 | Mouse movements         | Rotate view, Aim, Drag UI Elements |
-| ------------- | ------------- |
 |W, A, S, D               |  Move forward, backward, left, right|
 |Space                    | Jump|
 |Space                   | (During initial jump)| 
