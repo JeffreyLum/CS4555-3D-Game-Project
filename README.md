@@ -9,7 +9,8 @@ The City of Atlantis! It used to be a clean, modern, and beautiful city. But, as
 ## :joystick:	Gameplay:
 Garbage Hunter is a platformer and educational game. The Player will use the keyboard and mouse as input devices, take all the means to collect and bring the trash to the bins, and sort the garbage between the different classifications. The game would be over if time runs out or if the player has not sorted enough trash.  The Player has to sort the trash correctly to score enough points to win and enter the next challenge. 
 
-# :computer_mouse:	 Controls (Keyboard & Mouse):    
+# :computer_mouse:	 Controls (Keyboard & Mouse):   
+| ------------- | ------------- |
 | Mouse movements         | Rotate view, Aim, Drag UI Elements |
 |W, A, S, D               |  Move forward, backward, left, right|
 |Space                    | Jump|
