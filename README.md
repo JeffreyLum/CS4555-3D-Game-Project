@@ -1,4 +1,4 @@
-###  3D-Game-Project  👋
+##  3D-Game-Project 
 ### :video_game: Garbage Hunter:video_game: 
 - Team Name: 4-1Devs 4+3 4+3 4+3 Interactive Studios
 - Team Members: Jeffrey Lum, Ted Kim, Yunjian Lu
