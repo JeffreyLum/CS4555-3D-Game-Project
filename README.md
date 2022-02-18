@@ -31,4 +31,4 @@ https://www.youtube.com/watch?v=JcFq1V0u8_g
 # :link: Trailer Video2:
 https://www.youtube.com/watch?v=1-USNX54o4A
 # :link:	Playable game web:
-https://simmer.io/@Peterlu/garbage-hunterbeta
+https://simmer.io/@Peterlu/garbage--hunter
